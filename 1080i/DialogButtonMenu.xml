@@ -56,6 +56,7 @@
 				<visible>System.CanPowerDown</visible>
 				<font>font14</font>
 				<label>13016</label>
+				<visible>false</visible>
 			</control>
 			<control type="button" id="4">
 				<description>Custom Shutdown Timer</description>
@@ -73,6 +74,7 @@
 				<label>20150</label>
 				<visible>!System.HasAlarm(shutdowntimer)</visible>
 				<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+				<visible>false</visible>
 			</control>
 			<control type="button" id="5">
 				<description>Cancel Shutdown Timer</description>
@@ -89,6 +91,7 @@
 				<font>font14</font>
 				<label>$LOCALIZE[20151]$INFO[System.Alarmpos, (,)]</label>
 				<visible>System.HasAlarm(shutdowntimer)</visible>
+				<visible>false</visible>
 			</control>
 			<control type="button" id="6">
 				<description>Suspend button</description>
@@ -105,6 +108,7 @@
 				<visible>System.CanSuspend</visible>
 				<font>font14</font>
 				<label>13011</label>
+				<visible>false</visible>
 			</control>
 			<control type="button" id="7">
 				<description>Hibernate button</description>
@@ -121,6 +125,7 @@
 				<visible>System.CanHibernate</visible>
 				<font>font14</font>
 				<label>13010</label>
+				<visible>false</visible>
 			</control>
 			<control type="button" id="8">
 				<description>Reboot button</description>
@@ -137,6 +142,7 @@
 				<visible>System.CanReboot</visible>
 				<font>font14</font>
 				<label>13013</label>
+				<visible>false</visible>
 			</control>
 			<control type="button" id="9">
 				<description>Logoff button</description>
@@ -238,6 +244,22 @@
 				<onclick>ActivateWindow(favourites)</onclick>
 				<font>font14</font>
 				<label>1036</label>
+				<visible>false</visible>
+			</control>
+			<control type="button" id="17">
+				<description>Reload Skin</description>
+				<width>510</width>
+				<height>60</height>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<align>left</align>
+				<textwidth>435</textwidth>
+				<textoffsetx>45</textoffsetx>
+				<texturefocus border="35,2,35,2">button_shutdown_focus.png</texturefocus>
+				<texturenofocus border="35,2,35,2">button_shutdown_nofocus.png</texturenofocus>
+				<onclick>ReloadSkin()</onclick>
+				<font>font14</font>
+				<label>Reload Skin</label>
 			</control>
 			<control type="image" id="16">
 				<description>background image</description>

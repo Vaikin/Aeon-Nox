@@ -375,7 +375,7 @@
 					<onclick>Skin.ToggleSetting(toggleshowcasecovers)</onclick>
 					<visible>Control.IsVisible(53) + Container.Content(movies)</visible>
 				</control>
-				<control type="togglebutton" id="6099">
+				<control type="togglebutton" id="6098">
 					<description>Enable bigfan Covers</description>
 					<textwidth>255</textwidth>
 					<include>ButtonCommonValues</include>
