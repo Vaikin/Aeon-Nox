@@ -48,10 +48,10 @@
 			<include>BigFanList</include>
 			<visible>Control.IsVisible(591) + !Window.IsActive(addoninformation)</visible>
 			<control type="image">
-				<posx>60</posx>
-				<posy>680</posy>
-				<width>272</width>
-				<height>392</height>
+				<posx>50</posx>
+				<posy>670</posy>
+				<width>310</width>
+				<height>410</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
 				<texture background="true" fallback="empty.png">$VAR[PosterThumbVar]</texture>
 				<fadetime>200</fadetime>
@@ -62,14 +62,34 @@
 				<visible>![Container.OnNext | Container.OnPrevious]</visible>
 			</control>
 			<control type="image">
-				<posx>225</posx>
-				<posy>698</posy>
+				<texture background="true">thumbs/boxes/$VAR[BigFanCasesVar]</texture>
+				<posx>20</posx>
+				<posy>650</posy>
+				<width>335</width>
+				<height>437</height>
+				<visible>Control.IsVisible(591) + Container.Content(movies) + Skin.HasSetting(togglebigfancovers)</visible>
+				<visible>![Container.OnNext | Container.OnPrevious]</visible>
+			</control>
+			<control type="image">
+				<posx>255</posx>
+				<posy>689</posy>
 				<width>100</width>
 				<height>100</height>
 				<texture>$VAR[OverlayVar]</texture>
 				<aspectratio align="center" aligny="top">keep</aspectratio>
 				<bordersize>1</bordersize>
 				<visible>!Container.Content(seasons)</visible>
+				<visible>!Skin.HasSetting(togglebigfancovers)</visible>
+			</control>
+			<control type="image">
+				<posx>257</posx>
+				<posy>650</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>$VAR[OverlayVar]</texture>
+				<aspectratio align="center" aligny="top">keep</aspectratio>
+				<bordersize>1</bordersize>
+				<visible>!Container.Content(seasons) + Skin.HasSetting(togglebigfancovers)</visible>
 			</control>
 
 			<control type="group">
@@ -433,5 +453,12 @@
 			</control>
 		</control>
     </include>
+
+	<variable name="BigFanCasesVar">
+        <value condition="SubString(Container(591).ListItem.Filename,.3D.)">3d.png</value>
+		<value condition="SubString(Container(591).ListItem.Filename,hdtv)">hdtv.png</value>	
+		<value condition="SubString(Container(591).ListItem.Filename,screener)">screener.png</value>
+        <value>$INFO[Container(591).ListItem.VideoResolution]p.png</value>
+    </variable>
 
 </includes>

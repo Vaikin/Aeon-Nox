@@ -34,7 +34,7 @@
 			<animation effect="slide" tween="cubic" time="720" start="0,1080" end="0,0">WindowOpen</animation>
 			<animation effect="slide" tween="cubic" time="720" end="0,1080" start="0,0">WindowClose</animation>
 			<include condition="!Skin.HasSetting(Enable.SlimList)">VideoList</include>
-			<include condition="Skin.HasSetting(Enable.SlimList)">SlimVideoList</include>
+			<include condition="Skin.HasSetting(Enable.SlimList)">SlimList</include>
 			<!-- view id = 50 -->
 			<include>VideoInfoWall</include>
 			<!-- view id = 51 -->
@@ -57,7 +57,6 @@
 			<include>VideoLowList</include>
 			<!-- view id = 501 -->
 			<include>View_591_BigFan</include>
-			<!-- view id = 591 -->
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(500) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59)</visible>
@@ -367,6 +366,22 @@
 					<onclick condition="Control.IsVisible(52)">$VAR[52VideoInfoPanelVar]</onclick>
 					<onclick condition="Control.IsVisible(53)">$VAR[53VideoInfoPanelVar]</onclick>
 					<visible>Control.IsVisible(52) | Control.IsVisible(53)</visible>
+				</control>
+				<control type="togglebutton" id="6099">
+					<description>Enable showcase Covers</description>
+					<textwidth>255</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>Toggle CaseCovers</label>
+					<onclick>Skin.ToggleSetting(toggleshowcasecovers)</onclick>
+					<visible>Control.IsVisible(53) + Container.Content(movies)</visible>
+				</control>
+				<control type="togglebutton" id="6099">
+					<description>Enable bigfan Covers</description>
+					<textwidth>255</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>Toggle CaseCovers</label>
+					<onclick>Skin.ToggleSetting(togglebigfancovers)</onclick>
+					<visible>Control.IsVisible(591) + Container.Content(movies)</visible>
 				</control>
 				<control type="togglebutton" id="6053">
 					<description>LowList Toggle</description>
