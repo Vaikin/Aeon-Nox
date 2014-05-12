@@ -320,6 +320,22 @@
 			<texture border="40">listpanel_back.png</texture>
 		</control>
 	</include>
+	<include name="SystemLeftPanel02">
+		<control type="image">
+			<posx>50</posx>
+			<posy>874</posy>
+			<width>420</width>
+			<height>1004</height>
+			<texture border="40">panel_reflect.png</texture>
+		</control>
+		<control type="image">
+			<posx>50</posx>
+			<posy>0</posy>
+			<width>420</width>
+			<height>1004</height>
+			<texture border="40">listpanel_back.png</texture>
+		</control>
+	</include>
 	<include name="SystemRightPanel">
 		<control type="image">
 			<posx>490</posx>
@@ -333,6 +349,22 @@
 			<posy>0</posy>
 			<width>1380</width>
 			<height>904</height>
+			<texture border="40">listpanel_back.png</texture>
+		</control>
+	</include>
+	<include name="SystemRightPanel02">
+		<control type="image">
+			<posx>490</posx>
+			<posy>874</posy>
+			<width>1380</width>
+			<height>1004</height>
+			<texture border="40">panel_reflect.png</texture>
+		</control>
+		<control type="image">
+			<posx>490</posx>
+			<posy>0</posy>
+			<width>1380</width>
+			<height>1004</height>
 			<texture border="40">listpanel_back.png</texture>
 		</control>
 	</include>

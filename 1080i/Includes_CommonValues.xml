@@ -156,14 +156,14 @@
 		<posx>522</posx>
 		<posy>32</posy>
 		<width>1316</width>
-		<height>840</height>
+		<height>940</height>
 		<onup>60</onup>
 		<ondown>60</ondown>
 		<onleft>9000</onleft>
 		<orientation>horizontal</orientation>
 		<scrolltime tween="quadratic">300</scrolltime>
 		<pagecontrol>60</pagecontrol>
-		<itemlayout height="840" width="435">
+		<itemlayout height="940" width="435">
 			<control type="image">
 				<posx>15</posx>
 				<posy>20</posy>
@@ -172,71 +172,113 @@
 				<aspectratio aligny="top">keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
 			</control>
+			<control type="image">
+				<posx>15</posx>
+				<posy>310</posy>
+				<width>405</width>
+				<height>237</height>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Property(Art(landscape))]</texture>
+			</control>
 			<control type="textbox">
 				<posx>15</posx>
-				<top>250</top>
+				<top>190</top>
 				<width>405</width>
 				<height>130</height>
-				<label>[COLOR labelheader]$LOCALIZE[31010]:[/COLOR][CR]$INFO[ListItem.Property(NextNumber),,. ]$INFO[ListItem.Property(NextTitle)]</label>
-				<textcolor>grey2</textcolor>
+				<label>$INFO[ListItem.Property(NextNumber)]</label>
+				<font>font30</font>
+				<textcolor>labelheader</textcolor>
+				<autoscroll>false</autoscroll>
+			</control>
+			<control type="textbox">
+				<posx>15</posx>
+				<top>240</top>
+				<width>405</width>
+				<height>130</height>
+				<label>$INFO[ListItem.Property(NextTitle)]</label>
+				<font>font15</font>
+				<autoscroll>false</autoscroll>
+			</control>
+			
+			<control type="textbox">
+				<posx>15</posx>
+				<top>540</top>
+				<width>405</width>
+				<height>130</height>
+				<label>[COLOR labelheader]Previous Episode:[/COLOR] $INFO[ListItem.Property(LatestNumber)]</label>
+				<font>font15</font>
+				<autoscroll>false</autoscroll>
+			</control>
+			<control type="label">
+				<posx>15</posx>
+				<top>540</top>
+				<width>405</width>
+				<height>130</height>
+				<label>[COLOR labelheader]Name: [/COLOR]</label>
+				<font>font15</font>
+				<autoscroll>false</autoscroll>
+			</control>
+			<control type="label">
+				<posx>15</posx>
+				<left>100</left>
+				<top>540</top>
+				<width>325</width>
+				<height>130</height>
+				<label>$INFO[ListItem.Property(LatestTitle)]</label>
+				<font>font15</font>
+				<autoscroll>true</autoscroll>
+				<scrollspeed>150</scrollspeed>
+			</control>
+			<control type="textbox">
+				<posx>15</posx>
+				<top>620</top>
+				<width>405</width>
+				<height>130</height>
+				<label>[COLOR labelheader]Aired:[/COLOR] $INFO[ListItem.Property(LatestDate)]</label>
 				<font>font15</font>
 				<autoscroll>false</autoscroll>
 			</control>
 			<control type="textbox">
 				<posx>15</posx>
-				<top>400</top>
+				<top>710</top>
 				<width>405</width>
 				<height>130</height>
-				<label>[COLOR labelheader]$LOCALIZE[31011]:[/COLOR][CR]$INFO[ListItem.Property(LatestDate),[B], [/B]| ]$INFO[ListItem.Property(LatestTitle)]</label>
-				<textcolor>grey2</textcolor>
+				<label>[COLOR labelheader]Runtime:[/COLOR] $INFO[ListItem.Property(Runtime)] minutes</label>
 				<font>font15</font>
 				<autoscroll>false</autoscroll>
 			</control>
-			<control type="label">
-				<description>Episode Number</description>
-				<top>550</top>
-				<width>435</width>
-				<height>45</height>
-				<label>$LOCALIZE[126]:</label>
-				<textcolor>labelheader</textcolor>
-				<textoffsetx>15</textoffsetx>
+			<control type="textbox">
+				<posx>15</posx>
+				<top>750</top>
+				<width>405</width>
+				<height>130</height>
+				<label>[COLOR labelheader]Premiered:[/COLOR] $INFO[ListItem.Property(Premiered)]</label>
 				<font>font15</font>
+				<autoscroll>false</autoscroll>
 			</control>
-			<control type="label">
-				<description>Episode Number</description>
-				<top>595</top>
-				<width>435</width>
-				<height>45</height>
-				<label>$INFO[ListItem.Property(Status)]</label>
-				<textcolor>grey2</textcolor>
-				<textoffsetx>15</textoffsetx>
+			<control type="textbox">
+				<posx>15</posx>
+				<top>840</top>
+				<width>405</width>
+				<height>130</height>
+				<label>[COLOR labelheader]Status:[/COLOR] $INFO[ListItem.Property(Status)]</label>
 				<font>font15</font>
+				<autoscroll>false</autoscroll>
 			</control>
-			<control type="label">
-				<description>Episode Number</description>
-				<top>700</top>
-				<width>435</width>
-				<height>45</height>
-				<label>$LOCALIZE[31012]:</label>
-				<textcolor>labelheader</textcolor>
-				<textoffsetx>15</textoffsetx>
+			<control type="textbox">
+				<posx>15</posx>
+				<top>880</top>
+				<width>405</width>
+				<height>130</height>
+				<label>[COLOR labelheader]Airs:[/COLOR] $INFO[ListItem.Property(ShortTime)] @ $INFO[ListItem.Property(Network)]</label>
 				<font>font15</font>
-			</control>
-			<control type="label">
-				<description>Episode Number</description>
-				<top>745</top>
-				<width>435</width>
-				<height>45</height>
-				<label>$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), @ ]</label>
-				<textcolor>grey2</textcolor>
-				<textoffsetx>15</textoffsetx>
-				<font>font15</font>
+				<autoscroll>false</autoscroll>
 			</control>
 		</itemlayout>
-		<focusedlayout height="840" width="435">
+		<focusedlayout height="940" width="435">
 			<control type="image">
 				<width>435</width>
-				<height>840</height>
+				<height>940</height>
 				<texture border="4">listselect_fo.png</texture>
 				<visible>ControlGroup(9001).HasFocus()</visible>
 				<include>VisibleFadeEffect</include>
@@ -249,59 +291,107 @@
 				<aspectratio aligny="top">keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
 			</control>
+			<control type="image">
+				<posx>15</posx>
+				<posy>310</posy>
+				<width>405</width>
+				<height>237</height>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Property(Art(landscape))]</texture>
+			</control>
 			<control type="textbox">
 				<posx>15</posx>
-				<top>250</top>
+				<top>190</top>
 				<width>405</width>
 				<height>130</height>
-				<label>$LOCALIZE[31010]:[CR]$INFO[ListItem.Property(NextNumber),,. ]$INFO[ListItem.Property(NextTitle)]</label>
+				<label>$INFO[ListItem.Property(NextNumber)]</label>
+				<font>font30</font>
+				<textcolor>labelheader</textcolor>
+				<autoscroll>false</autoscroll>
+			</control>
+			<control type="textbox">
+				<posx>15</posx>
+				<top>240</top>
+				<width>405</width>
+				<height>130</height>
+				<label>$INFO[ListItem.Property(NextTitle)]</label>
+				<font>font15</font>
+				<autoscroll>false</autoscroll>
+			</control>
+			
+			<control type="textbox">
+				<posx>15</posx>
+				<top>540</top>
+				<width>405</width>
+				<height>130</height>
+				<label>[COLOR labelheader]Previous Episode:[/COLOR] $INFO[ListItem.Property(LatestNumber)]</label>
+				<font>font15</font>
+				<autoscroll>false</autoscroll>
+			</control>
+			<control type="label">
+				<posx>15</posx>
+				<top>540</top>
+				<width>405</width>
+				<height>130</height>
+				<label>[COLOR labelheader]Name: [/COLOR]</label>
+				<font>font15</font>
+				<autoscroll>false</autoscroll>
+			</control>
+			<control type="label">
+				<posx>15</posx>
+				<left>100</left>
+				<top>540</top>
+				<width>325</width>
+				<height>130</height>
+				<label>$INFO[ListItem.Property(LatestTitle)]</label>
+				<font>font15</font>
+				<autoscroll>true</autoscroll>
+				<scrollspeed>150</scrollspeed>
+			</control>
+			<control type="textbox">
+				<posx>15</posx>
+				<top>620</top>
+				<width>405</width>
+				<height>130</height>
+				<label>[COLOR labelheader]Aired:[/COLOR] $INFO[ListItem.Property(LatestDate)]</label>
 				<font>font15</font>
 				<autoscroll>false</autoscroll>
 			</control>
 			<control type="textbox">
 				<posx>15</posx>
-				<top>400</top>
+				<top>710</top>
 				<width>405</width>
 				<height>130</height>
-				<label>$LOCALIZE[31011]:[CR]$INFO[ListItem.Property(LatestDate),[B], [/B]| ]$INFO[ListItem.Property(LatestTitle)]</label>
+				<label>[COLOR labelheader]Runtime:[/COLOR] $INFO[ListItem.Property(Runtime)] minutes</label>
 				<font>font15</font>
 				<autoscroll>false</autoscroll>
 			</control>
-			<control type="label">
-				<description>Episode Number</description>
-				<top>550</top>
-				<width>435</width>
-				<height>45</height>
-				<label>$LOCALIZE[126]:</label>
-				<textoffsetx>15</textoffsetx>
+			<control type="textbox">
+				<posx>15</posx>
+				<top>750</top>
+				<width>405</width>
+				<height>130</height>
+				<label>[COLOR labelheader]Premiered:[/COLOR] $INFO[ListItem.Property(Premiered)]</label>
 				<font>font15</font>
+				<autoscroll>false</autoscroll>
 			</control>
-			<control type="label">
-				<description>Episode Number</description>
-				<top>595</top>
-				<width>435</width>
-				<height>45</height>
-				<label>$INFO[ListItem.Property(Status)]</label>
-				<textoffsetx>15</textoffsetx>
+			<control type="textbox">
+				<posx>15</posx>
+				<top>840</top>
+				<width>405</width>
+				<height>130</height>
+				<label>[COLOR labelheader]Status:[/COLOR] $INFO[ListItem.Property(Status)]</label>
 				<font>font15</font>
+				<autoscroll>false</autoscroll>
 			</control>
-			<control type="label">
-				<description>Episode Number</description>
-				<top>700</top>
-				<width>435</width>
-				<height>45</height>
-				<label>$LOCALIZE[31012]:</label>
-				<textoffsetx>15</textoffsetx>
+			<control type="textbox">
+				<posx>15</posx>
+				<top>880</top>
+				<width>405</width>
+				<height>130</height>
+				<label>[COLOR labelheader]Airs:[/COLOR] $INFO[ListItem.Property(ShortTime)] @ $INFO[ListItem.Property(Network)]</label>
 				<font>font15</font>
-			</control>
-			<control type="label">
-				<description>Episode Number</description>
-				<top>745</top>
-				<width>435</width>
-				<height>45</height>
-				<label>$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), @ ]</label>
-				<textoffsetx>15</textoffsetx>
-				<font>font15</font>
+				<autoscroll>false</autoscroll>
 			</control>
 		</focusedlayout>
 	</include>

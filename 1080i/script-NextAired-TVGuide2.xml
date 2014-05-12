@@ -8,14 +8,14 @@
 		<include>CommonBackground</include>
 		<control type="group">
 			<posx>0</posx>
-			<posy>128</posy>
+			<posy>45</posy>
 			<include>Window_OpenClose_Animation</include>
-			<include>SystemLeftPanel</include>
+			<include>SystemLeftPanel02</include>
 			<control type="list" id="9000">
 				<posx>82</posx>
 				<posy>32</posy>
 				<width>356</width>
-				<height>720</height>
+				<height>820</height>
 				<onleft>61</onleft>
 				<onright condition="Container(9000).HasFocus(1)">200</onright>
 				<onright condition="Container(9000).HasFocus(2)">201</onright>
@@ -252,13 +252,13 @@
 			<control type="image">
 				<description>LOGO</description>
 				<posx>82</posx>
-				<posy>752</posy>
+				<posy>852</posy>
 				<width>356</width>
 				<height>120</height>
 				<aspectratio>keep</aspectratio>
 				<texture>aeon-nox-logo.png</texture>
 			</control>
-			<include>SystemRightPanel</include>
+			<include>SystemRightPanel02</include>
 			<control type="group" id="9001">
 				<control type="scrollbar" id="60">
 					<posx>522</posx>
