@@ -71,25 +71,34 @@
 				<visible>![Container.OnNext | Container.OnPrevious]</visible>
 			</control>
 			<control type="image">
-				<posx>255</posx>
+				<posx>240</posx>
 				<posy>689</posy>
 				<width>100</width>
 				<height>100</height>
 				<texture>$VAR[OverlayVar]</texture>
 				<aspectratio align="center" aligny="top">keep</aspectratio>
 				<bordersize>1</bordersize>
-				<visible>!Container.Content(seasons)</visible>
-				<visible>!Skin.HasSetting(togglebigfancovers)</visible>
+				<visible>Container.Content(movies) + !Skin.HasSetting(togglebigfancovers)</visible>
 			</control>
 			<control type="image">
-				<posx>257</posx>
+				<posx>244</posx>
 				<posy>650</posy>
 				<width>100</width>
 				<height>100</height>
 				<texture>$VAR[OverlayVar]</texture>
 				<aspectratio align="center" aligny="top">keep</aspectratio>
 				<bordersize>1</bordersize>
-				<visible>!Container.Content(seasons) + Skin.HasSetting(togglebigfancovers)</visible>
+				<visible>Container.Content(movies) + Skin.HasSetting(togglebigfancovers)</visible>
+			</control>
+			<control type="image">
+				<posx>241</posx>
+				<posy>689</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>$VAR[OverlayVar]</texture>
+				<aspectratio align="center" aligny="top">keep</aspectratio>
+				<bordersize>1</bordersize>
+				<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 			</control>
 
 			<control type="group">

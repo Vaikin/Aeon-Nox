@@ -81,8 +81,8 @@
 						</control>
 						<control type="image">
 							<posx>120</posx>
-							<posy>5</posy>
-							<width>80</width>
+							<posy>-2</posy>
+							<width>85</width>
 							<height>80</height>
 							<texture>$VAR[OverlayVar]</texture>
 							<aspectratio align="center" aligny="top">keep</aspectratio>

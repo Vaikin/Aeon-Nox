@@ -31,7 +31,7 @@
 		<control type="group">
 			<visible>![Window.IsActive(home) | Window.IsActive(startup)] | Window.IsActive(script-globalsearch-main.xml)</visible>
 			<include>Window_OpenClose_Animation</include>
-			<visible>![Control.IsVisible(59) | Control.IsVisible(501) | Control.IsVisible(591)]</visible>
+			<visible>![Control.IsVisible(59) | Control.IsVisible(501) | Control.IsVisible(591) | Control.IsVisible(590)]</visible>
 			<include>ViewAnimation</include>
 			<animation effect="slide" end="0,80" time="720" tween="cubic" easing="inout" condition="![[Control.isVisible(52) + !Window.IsActive(systeminfo)] | Control.IsVisible(53) | Control.IsVisible(54) | Control.IsVisible(55)  | Control.IsVisible(56) | Control.IsVisible(500) | Control.IsVisible(57)  | Control.IsVisible(58)]">Conditional</animation>
             <control type="image">
@@ -63,7 +63,7 @@
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture border="1">logo_back.png</texture>
-			<visible>Control.IsVisible(59) | Control.IsVisible(591)</visible>
+			<visible>Control.IsVisible(59) | Control.IsVisible(591) | Control.IsVisible(590)</visible>
 			<include>ViewAnimation</include>
 		</control>
 	</include>

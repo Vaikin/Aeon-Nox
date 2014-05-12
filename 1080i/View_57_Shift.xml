@@ -22,7 +22,7 @@
             <animation effect="fade" start="30" end="100" time="160">UnFocus</animation>
         </control>
 		<control type="image">
-			<posx>200</posx>
+			<posx>210</posx>
 			<posy>149</posy>
 			<width>100</width>
 			<height>100</height>
