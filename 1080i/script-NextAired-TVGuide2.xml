@@ -137,20 +137,20 @@
 				<content>
 					<item id="1">
 						<label>$INFO[Window(home).Property(NextAired.200.Wday)]$INFO[Container(200).NumItems, (,)]</label>
-						<label2>$INFO[Window(Home).Property(NextAired.200.Date)]</label2>
+						<label2>$INFO[Window(Home).Property(NextAired.YesterdayText)]</label2>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 						<visible>!IsEmpty(Window(home).Property(NextAired.200.Wday))</visible>
 					</item>
 					<item id="2">
 						<label>[COLOR selected]$INFO[Window(home).Property(NextAired.201.Wday)]$INFO[Container(201).NumItems, (,)][/COLOR]</label>
-						<label2>[COLOR selected]$INFO[Window(Home).Property(NextAired.201.Date)][/COLOR]</label2>
+						<label2>[COLOR selected]$INFO[Window(Home).Property(NextAired.TodayText)][/COLOR]</label2>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 					</item>
 					<item id="3">
 						<label>$INFO[Window(home).Property(NextAired.202.Wday)]$INFO[Container(202).NumItems, (,)]</label>
-						<label2>$INFO[Window(Home).Property(NextAired.202.Date)]</label2>
+						<label2>$INFO[Window(Home).Property(NextAired.TomorrowText)]</label2>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 					</item>
@@ -451,7 +451,7 @@
 					<onback>2000</onback>
 					<include>ButtonCommonValues</include>
                     <label>5</label>
-                    <onright>2000</onright>
+                    <onright>9000</onright>
                 </control>
             </control>
         </control>
