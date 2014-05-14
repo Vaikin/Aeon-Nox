@@ -118,6 +118,12 @@
 							<control type="image">
 								<include>WatchedOverlayShowCase</include>
 								<texture>$VAR[IconOverlay-1Var]</texture>
+								<visible>[!Container.Content(movies)] | [Container.Content(movies) + !Skin.HasSetting(toggleshowcasecovers)]</visible>
+							</control>
+							<control type="image">
+								<include>WatchedOverlayShowCase2</include>
+								<texture>$VAR[IconOverlay-1Var]</texture>
+								<visible>Skin.HasSetting(toggleshowcasecovers) + Container.Content(movies)</visible>
 							</control>
 							<control type="group">
 								<posx>28</posx>
@@ -265,6 +271,12 @@
 							<control type="image">
 								<include>WatchedOverlayShowCase</include>
 								<texture>$VAR[IconOverlay1Var]</texture>
+								<visible>[!Container.Content(movies)] | [Container.Content(movies) + !Skin.HasSetting(toggleshowcasecovers)]</visible>
+							</control>
+							<control type="image">
+								<include>WatchedOverlayShowCase2</include>
+								<texture>$VAR[IconOverlay1Var]</texture>
+								<visible>Skin.HasSetting(toggleshowcasecovers) + Container.Content(movies)</visible>
 							</control>
 							<control type="group">
 								<posx>28</posx>

@@ -162,7 +162,7 @@
 							<height>42</height>
 							<aligny>top</aligny>
 							<align>left</align>
-							<font>font16</font>
+							<font>font48</font>
 							<textcolor>grey</textcolor>
 							<scroll>true</scroll>
 							<label>[B]$INFO[ListItem.Label][/B]</label>

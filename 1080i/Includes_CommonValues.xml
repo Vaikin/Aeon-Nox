@@ -179,6 +179,16 @@
 				<height>237</height>
 				<aspectratio aligny="top">keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(landscape))]</texture>
+				<visible>!IsEmpty(ListItem.Property(Art(landscape)))</visible>
+			</control>
+			<control type="image">
+				<posx>15</posx>
+				<posy>310</posy>
+				<width>405</width>
+				<height>237</height>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Property(Art(fanart))]</texture>
+				<visible>IsEmpty(ListItem.Property(Art(landscape))) + !IsEmpty(ListItem.Property(Art(fanart)))</visible>
 			</control>
 			<control type="textbox">
 				<posx>15</posx>
@@ -298,6 +308,16 @@
 				<height>237</height>
 				<aspectratio aligny="top">keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Art(landscape))]</texture>
+				<visible>!IsEmpty(ListItem.Property(Art(landscape)))</visible>
+			</control>
+			<control type="image">
+				<posx>15</posx>
+				<posy>310</posy>
+				<width>405</width>
+				<height>237</height>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Property(Art(fanart))]</texture>
+				<visible>IsEmpty(ListItem.Property(Art(landscape))) + !IsEmpty(ListItem.Property(Art(fanart)))</visible>
 			</control>
 			<control type="textbox">
 				<posx>15</posx>
