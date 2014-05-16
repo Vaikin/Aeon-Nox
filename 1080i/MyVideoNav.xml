@@ -763,6 +763,15 @@
 					<onclick>Skin.ToggleSetting(togglebigfancovers)</onclick>
 					<visible>Control.IsVisible(591) + Container.Content(movies)</visible>
 				</control>
+				<control type="togglebutton" id="6097">
+					<description>Left sided episode view</description>
+					<textwidth>255</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>Toggle Orientation</label>
+					<onclick>Skin.ToggleSetting(episodevieworientation)</onclick>
+					<onclick>ReloadSkin()</onclick>
+					<visible>Control.IsVisible(502)</visible>
+				</control>
 				<control type="togglebutton" id="6053">
 					<description>LowList Toggle</description>
 					<textwidth>255</textwidth>
