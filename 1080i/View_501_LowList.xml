@@ -26,6 +26,15 @@
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
+				<control type="image">
+					<texture background="true">thumbs/boxes/$VAR[LowListCases]</texture>
+					<left>-62</left>
+					<top>20</top>
+					<width>510</width>
+					<height>635</height>
+					<aspectratio>stretch</aspectratio>
+					<visible>Container.Content(movies) + Skin.HasSetting(togglelowlistcovers)</visible>
+				</control>
 			</control>
 
 			<control type="grouplist">
@@ -1390,5 +1399,12 @@
 	<include name="LowListHeightLow">
 		<height>347</height>
 	</include>
+
+	<variable name="LowListCases">
+		<value condition="SubString(ListItem.Filename,.3D.)">3d.png</value>
+		<value condition="SubString(ListItem.Filename,hdtv)">hdtv.png</value>	
+		<value condition="SubString(ListItem.Filename,screener)">screener.png</value>
+        <value>$INFO[ListItem.VideoResolution]p.png</value>
+	</variable>
 
 </includes>

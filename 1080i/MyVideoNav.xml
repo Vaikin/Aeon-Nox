@@ -64,7 +64,7 @@
 			<!-- view id = 590 -->
 		</control>
 		<control type="group">
-			<visible>Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(500) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59)</visible>
+			<visible>Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(500) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(590)</visible>
 			<visible>!Window.IsActive(addoninformation)</visible>
 			<animation effect="slide" tween="cubic" time="720" start="0,806" end="0,0">VisibleChange</animation>
 			<include>Window_OpenClose_Animation</include>
@@ -489,6 +489,261 @@
 					</control>
 				</control>
 			</control>
+
+			<!-- Logos -->
+			<control type="group">
+				<visible>Control.IsVisible(59) | Control.IsVisible(590)</visible>
+				<animation effect="fade" tween="cubic" time="720" start="0,806" end="0,0">VisibleChange</animation>
+
+				<!-- Logo Movies -->
+				<control type="group">
+					<posx>20</posx>
+					<posy>1010</posy>
+					<width>1920</width>
+					<align>center</align>
+					<visible>Container.Content(movies)</visible>
+					<!-- Video Codec: h264, divx, etc -->
+					<control type="group">
+						<control type="image" id="857660">
+							<colordiffuse>white</colordiffuse>
+							<include>MediaFlagVars</include>
+							<bordersize>2</bordersize>
+							<texture>$INFO[ListItem.VideoCodec,flags/video/,.png]</texture>
+						</control>
+						<control type="label">
+							<width>155</width>
+							<height>90</height>
+							<align>center</align>
+							<label>$INFO[ListItem.VideoCodec]</label>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<wrapmultiline>true</wrapmultiline>
+							<visible>IsEmpty(Control.GetLabel(857660))</visible>
+						</control>
+					</control>
+					<!-- Studios: WB, Universal, etc -->
+					<control type="group">
+						<posx>150</posx>
+						<control type="image" id="857661">
+							<colordiffuse>white</colordiffuse>
+							<include>MediaFlagVars</include>
+							<bordersize>2</bordersize>
+							<texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+						</control>
+						<control type="label">
+							<width>155</width>
+							<height>90</height>
+							<align>center</align>
+							<label>$INFO[ListItem.Studio]</label>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<wrapmultiline>true</wrapmultiline>
+							<visible>IsEmpty(Control.GetLabel(857661))</visible>
+						</control>
+					</control>
+					<!-- Mpaa Rating: PG-13, R, etc -->
+					<control type="group">
+						<posx>300</posx>
+						<control type="image" id="857662">
+							<colordiffuse>white</colordiffuse>
+							<include>MediaFlagVars</include>
+							<bordersize>2</bordersize>
+							<texture>$INFO[ListItem.Mpaa,flags/mpaa/,.png]</texture>
+						</control>
+						<control type="label">
+							<width>155</width>
+							<height>90</height>
+							<align>center</align>
+							<label>$INFO[ListItem.Mpaa]</label>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<wrapmultiline>true</wrapmultiline>
+							<visible>IsEmpty(Control.GetLabel(857662))</visible>
+						</control>
+					</control>
+					<!-- VideoAspect: 2.35, 1.78, etc -->
+					<control type="group">
+						<posx>1430</posx>
+						<control type="image" id="857663">
+							<colordiffuse>white</colordiffuse>
+							<include>MediaFlagVars</include>
+							<bordersize>2</bordersize>
+							<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
+						</control>
+						<control type="label">
+							<width>155</width>
+							<height>90</height>
+							<align>center</align>
+							<label>$INFO[ListItem.VideoAspect]</label>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<wrapmultiline>true</wrapmultiline>
+							<visible>IsEmpty(Control.GetLabel(857663))</visible>
+						</control>
+					</control>
+					<!-- VideoResolution: 1080p, 720p, etc -->
+					<control type="group">
+						<posx>1580</posx>
+						<control type="image" id="857664">
+							<colordiffuse>white</colordiffuse>
+							<include>MediaFlagVars</include>
+							<bordersize>2</bordersize>
+							<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
+						</control>
+						<control type="label">
+							<width>155</width>
+							<height>90</height>
+							<align>center</align>
+							<label>$INFO[ListItem.VideoResolution]</label>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<wrapmultiline>true</wrapmultiline>
+							<visible>IsEmpty(Control.GetLabel(857664))</visible>
+						</control>
+					</control>
+					<!-- AudioCodec: dts, aac, etc -->
+					<control type="group">
+						<posx>1730</posx>
+						<control type="image" id="857665">
+							<colordiffuse>white</colordiffuse>
+							<include>MediaFlagVars</include>
+							<bordersize>2</bordersize>
+							<texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
+						</control>
+						<control type="label">
+							<width>155</width>
+							<height>90</height>
+							<align>center</align>
+							<label>$INFO[ListItem.AudioCodec]</label>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<wrapmultiline>true</wrapmultiline>
+							<visible>IsEmpty(Control.GetLabel(857665))</visible>
+						</control>
+					</control>
+				</control>
+				
+				<!-- Showcase TV-->
+				<control type="group">
+					<posx>20</posx>
+					<posy>1010</posy>
+					<width>1920</width>
+					<align>center</align>
+					<visible>Container.Content(tvshows)</visible>	
+					<!-- Studios: WB, Universal, etc -->
+					<control type="group">
+						<control type="image" id="857650">
+							<colordiffuse>white</colordiffuse>
+							<include>MediaFlagVars</include>
+							<bordersize>2</bordersize>
+							<texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+						</control>
+						<control type="label">
+							<width>155</width>
+							<height>90</height>
+							<align>center</align>
+							<label>$INFO[ListItem.Studio]</label>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<wrapmultiline>true</wrapmultiline>
+							<visible>IsEmpty(Control.GetLabel(857650))</visible>
+						</control>
+					</control>
+					<!-- Total Number of Seasons -->
+					<control type="group">
+						<posx>150</posx>
+						<visible>!IsEmpty(ListItem.Property(TotalSeasons))</visible>
+						<control type="label">
+							<posx>0</posx>
+							<posy>-3</posy>
+							<width>150</width>
+							<height>60</height>
+							<align>center</align>
+							<label>[B]$INFO[ListItem.Property(TotalSeasons)][/B]</label>
+							<font>font16</font>
+							<wrapmultiline>true</wrapmultiline>
+							<textcolor>grey</textcolor>
+						</control>
+						<control type="label">
+							<posy>47</posy>
+							<posx>0</posx>
+							<width>150</width>
+							<height>30</height>
+							<align>center</align>
+							<label>[LOWERCASE]Seasons[/LOWERCASE]</label>
+							<font>font13</font>
+							<textcolor>grey</textcolor>
+						</control>
+					</control>
+					<!-- Total Number of Episodes -->
+					<control type="group">
+						<posx>300</posx>
+						<visible>!IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+						<control type="label">
+							<posx>0</posx>
+							<posy>-3</posy>
+							<width>150</width>
+							<height>60</height>
+							<align>center</align>
+							<label>[B]$INFO[ListItem.Property(TotalEpisodes)][/B]</label>
+							<font>font16</font>
+							<wrapmultiline>true</wrapmultiline>
+							<textcolor>grey</textcolor>
+						</control>
+						<control type="label">
+							<posy>47</posy>
+							<posx>0</posx>
+							<width>150</width>
+							<height>30</height>
+							<align>center</align>
+							<label>[LOWERCASE]Episodes[/LOWERCASE]</label>
+							<font>font13</font>
+							<textcolor>grey</textcolor>
+						</control>
+					</control>
+					<!-- TVDB Series Status -->
+					<control type="group">
+						<posx>1430</posx>
+						<control type="image" id="857683">
+							<colordiffuse>white</colordiffuse>
+							<include>MediaFlagVars</include>
+							<bordersize>2</bordersize>
+							<texture>tvguide/$INFO[Window(Home).Property(NextAired.StatusID)].png</texture>
+						</control>
+						<control type="label">
+							<posx>-80</posx>
+							<posy>-20</posy>
+							<width>300</width>
+							<height>60</height>
+							<align>center</align>
+							<label>[B]$INFO[Window(Home).Property(NextAired.Status)][/B]</label>
+							<font>font13</font>
+							<wrapmultiline>true</wrapmultiline>
+							<textcolor>grey</textcolor>
+						</control>
+					</control>
+					<!-- Mpaa Rating: PG13, R, etc -->
+					<control type="group">
+						<posx>1730</posx>
+						<control type="image" id="857655">
+							<colordiffuse>white</colordiffuse>
+							<include>MediaFlagVars</include>
+							<bordersize>2</bordersize>
+							<texture>$INFO[ListItem.Mpaa,flags/mpaa/,.png]</texture>
+						</control>
+						<control type="label">
+							<width>155</width>
+							<height>90</height>
+							<align>center</align>
+							<label>$INFO[ListItem.Mpaa]</label>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<wrapmultiline>true</wrapmultiline>
+							<visible>IsEmpty(Control.GetLabel(857655))</visible>
+						</control>
+					</control>
+				</control>
+			</control>
 			
 			<!-- Landscape -->
 			<control type="group">
@@ -762,6 +1017,22 @@
 					<label>Toggle CaseCovers</label>
 					<onclick>Skin.ToggleSetting(togglebigfancovers)</onclick>
 					<visible>Control.IsVisible(591) + Container.Content(movies)</visible>
+				</control>
+				<control type="togglebutton" id="6097">
+					<description>Enable Shift Covers</description>
+					<textwidth>255</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>Toggle CaseCovers</label>
+					<onclick>Skin.ToggleSetting(toggleshiftcovers)</onclick>
+					<visible>Control.IsVisible(57) + Container.Content(movies)</visible>
+				</control>
+				<control type="togglebutton" id="6096">
+					<description>Enable LowList Covers</description>
+					<textwidth>255</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>Toggle CaseCovers</label>
+					<onclick>Skin.ToggleSetting(togglelowlistcovers)</onclick>
+					<visible>Control.IsVisible(501) + Container.Content(movies)</visible>
 				</control>
 				<control type="togglebutton" id="6097">
 					<description>Left sided episode view</description>
