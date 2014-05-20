@@ -273,6 +273,7 @@
 			<aspectratio aligny="bottom" align="right">keep</aspectratio>
 			<texture background="true">$VAR[PlayerArtworkVar]</texture>
 			<visible>Player.Paused | Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd)</visible>
+			<visible>False</visible>
 			<animation effect="slide" start="0,300" end="0,0" time="200">WindowOpen</animation>
 			<animation effect="slide" start="0,300" end="0,0" time="200">VisibleChange</animation>
 		</control>

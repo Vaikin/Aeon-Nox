@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>true</allowoverlay>
-	<views>50,51,52,53,55,56,57,58,59,500,501,502,591,590</views>
+	<views>50,51,52,53,55,56,57,58,59,500,501,502,591</views>
 	<onload>SetProperty(Window.HasSettings,True,home)</onload>
 	<onload>ClearProperty(MediaMenu,Home)</onload>
 	<onunload>ClearProperty(Window.HasSettings,Home)</onunload>
@@ -60,11 +60,9 @@
 			<!-- view id = 502 -->
 			<include>View_591_BigFan</include>
 			<!-- view id = 591 -->
-			<include>View_590_OneLogo</include>
-			<!-- view id = 590 -->
 		</control>
 		<control type="group">
-			<visible>Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(500) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(590)</visible>
+			<visible>Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(500) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59)</visible>
 			<visible>!Window.IsActive(addoninformation)</visible>
 			<animation effect="slide" tween="cubic" time="720" start="0,806" end="0,0">VisibleChange</animation>
 			<include>Window_OpenClose_Animation</include>
@@ -492,8 +490,8 @@
 
 			<!-- Logos -->
 			<control type="group">
-				<visible>Control.IsVisible(59) | Control.IsVisible(590)</visible>
-				<animation effect="fade" tween="cubic" time="720" start="0,806" end="0,0">VisibleChange</animation>
+				<visible>Control.IsVisible(59)</visible>
+				<visible>[Container.Content(movies) | Container.Content(tvshows)]</visible>
 
 				<!-- Logo Movies -->
 				<control type="group">
@@ -1034,7 +1032,7 @@
 					<onclick>Skin.ToggleSetting(togglelowlistcovers)</onclick>
 					<visible>Control.IsVisible(501) + Container.Content(movies)</visible>
 				</control>
-				<control type="togglebutton" id="6097">
+				<control type="togglebutton" id="6095">
 					<description>Left sided episode view</description>
 					<textwidth>255</textwidth>
 					<include>ButtonCommonValues</include>
@@ -1042,6 +1040,14 @@
 					<onclick>Skin.ToggleSetting(episodevieworientation)</onclick>
 					<onclick>ReloadSkin()</onclick>
 					<visible>Control.IsVisible(502)</visible>
+				</control>
+				<control type="togglebutton" id="6094">
+					<description>Logo Single Logo</description>
+					<textwidth>255</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>Toggle OneLogo</label>
+					<onclick>Skin.ToggleSetting(toggleonelogo)</onclick>
+					<visible>Control.IsVisible(59)</visible>
 				</control>
 				<control type="togglebutton" id="6053">
 					<description>LowList Toggle</description>

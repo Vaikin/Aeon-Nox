@@ -2,40 +2,43 @@
 <includes>
 	<!-- Logo -->
 	<include name="LandscapeLogoLayout">
-		<control type="image">
-			<posx>52</posx>
-			<posy>178</posy>
-			<width>390</width>
-			<height>164</height>
-			<aspectratio aligny="bottom">keep</aspectratio>
-			<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-		</control>
-		<control type="image">
-			<posx>52</posx>
-			<posy>345</posy>
-			<width>390</width>
-			<height>164</height>
-			<aspectratio aligny="top">keep</aspectratio>
-			<texture background="true" flipy="true">$INFO[ListItem.Art(clearlogo)]</texture>
-			<animation effect="fade" start="10" end="10" time="160" tween="cubic" easing="inout" condition="true">Conditional</animation>
-		</control>
 		<control type="group">
-			<visible>IsEmpty(ListItem.Art(clearlogo))</visible>
-			<control type="label">
-				<posx>248</posx>
-				<posy>335</posy>
-				<width>470</width>
-				<height>30</height>
-				<align>center</align>
-				<font>font13_title</font>
-				<textcolor>white</textcolor>
-				<label>$VAR[FloorLabelVar]</label>
+			<visible>!Skin.HasSetting(toggleonelogo)</visible>
+			<control type="image">
+				<posx>52</posx>
+				<posy>178</posy>
+				<width>390</width>
+				<height>164</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 			</control>
-		</control>
-		<control type="group">
-			<posx>20</posx>
-			<posy>300</posy>
-			<include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon</include>
+			<control type="image">
+				<posx>52</posx>
+				<posy>345</posy>
+				<width>390</width>
+				<height>164</height>
+				<aspectratio aligny="top">keep</aspectratio>
+				<texture background="true" flipy="true">$INFO[ListItem.Art(clearlogo)]</texture>
+				<animation effect="fade" start="10" end="10" time="160" tween="cubic" easing="inout" condition="true">Conditional</animation>
+			</control>
+			<control type="group">
+				<visible>IsEmpty(ListItem.Art(clearlogo))</visible>
+				<control type="label">
+					<posx>248</posx>
+					<posy>335</posy>
+					<width>470</width>
+					<height>30</height>
+					<align>center</align>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<label>$VAR[FloorLabelVar]</label>
+				</control>
+			</control>
+			<control type="group">
+				<posx>20</posx>
+				<posy>300</posy>
+				<include condition="Skin.HasSetting(Disable.UnwatchedIcon)">UnwatchedIcon</include>
+			</control>
 		</control>
 	</include>
 
@@ -72,8 +75,8 @@
 		</itemlayout>
 		<focusedlayout width="495" height="450">
 			<control type="group">
-				<animation effect="zoom" center="auto" start="100" end="122" time="480" tween="back" reversible="false">Focus</animation>
-				<animation effect="zoom" center="auto" start="122" end="100" time="160" tween="back" reversible="false">UnFocus</animation>
+				<!-- <animation effect="zoom" center="auto" start="100" end="122" time="480" tween="back" reversible="false">Focus</animation> -->
+				<!-- <animation effect="zoom" center="auto" start="122" end="100" time="160" tween="back" reversible="false">UnFocus</animation> -->
 				<include>LandscapeLogoLayout</include>
 			</control>
 		</focusedlayout>
@@ -100,6 +103,33 @@
 				<showonepage>false</showonepage>
 				<orientation>horizontal</orientation>
 				<animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
+			</control>
+			<control type="group">
+				<visible>Skin.HasSetting(toggleonelogo)</visible>
+				<control type="image">
+					<left>650</left>
+					<top>810</top>
+					<width>635</width>
+					<height>245</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
+					<fadetime>200</fadetime>
+					<animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
+					<animation effect="fade" delay="160" end="100" time="240" condition="!IsEmpty(Listitem.Art(clearlogo))">Conditional</animation>
+					<visible>![Container.OnNext | Container.OnPrevious] + !IsEmpty(Listitem.Art(clearlogo))</visible>
+				</control>
+				<control type="label">
+					<left>650</left>
+					<top>810</top>
+					<width>635</width>
+					<height>245</height>
+					<font>font48_title</font>
+					<textcolor>white</textcolor>
+					<label>$VAR[FloorLabelVar]</label>
+					<animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
+					<animation effect="fade" delay="160" end="100" time="240" condition="!IsEmpty(Listitem.Art(clearlogo))">Conditional</animation>
+					<visible>![Container.OnNext | Container.OnPrevious] + IsEmpty(Listitem.Art(clearlogo))</visible>
+				</control>
 			</control>
 		</control>
 	</include>
