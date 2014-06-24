@@ -3,7 +3,7 @@
 	<!-- Logo -->
 	<include name="LandscapeLogoLayout">
 		<control type="group">
-			<visible>!Skin.HasSetting(toggleonelogo)</visible>
+			<visible>[Container.Content(tvshows) + !Skin.HasSetting(toggleonelogotv)] | [Container.Content(movies) + !Skin.HasSetting(toggleonelogomovies)]</visible>
 			<control type="image">
 				<posx>52</posx>
 				<posy>178</posy>
@@ -105,7 +105,7 @@
 				<animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(61) + !Container.Scrolling">Conditional</animation>
 			</control>
 			<control type="group">
-				<visible>Skin.HasSetting(toggleonelogo)</visible>
+				<visible>[Container.Content(tvshows) + Skin.HasSetting(toggleonelogotv)] | [Container.Content(movies) + Skin.HasSetting(toggleonelogomovies)]</visible>
 				<control type="image">
 					<left>650</left>
 					<top>810</top>

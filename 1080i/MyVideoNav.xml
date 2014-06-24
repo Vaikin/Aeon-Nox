@@ -1042,12 +1042,20 @@
 					<visible>Control.IsVisible(502)</visible>
 				</control>
 				<control type="togglebutton" id="6094">
-					<description>Logo Single Logo</description>
+					<description>Logo Single Logo Movies</description>
 					<textwidth>255</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>Toggle OneLogo</label>
-					<onclick>Skin.ToggleSetting(toggleonelogo)</onclick>
-					<visible>Control.IsVisible(59)</visible>
+					<onclick>Skin.ToggleSetting(toggleonelogomovies)</onclick>
+					<visible>Control.IsVisible(59) + Container.Content(movies)</visible>
+				</control>
+				<control type="togglebutton" id="6093">
+					<description>Logo Single Logo TVShows</description>
+					<textwidth>255</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>Toggle OneLogo</label>
+					<onclick>Skin.ToggleSetting(toggleonelogotv)</onclick>
+					<visible>Control.IsVisible(59) + Container.Content(tvshows)</visible>
 				</control>
 				<control type="togglebutton" id="6053">
 					<description>LowList Toggle</description>
