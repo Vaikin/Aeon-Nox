@@ -91,7 +91,16 @@
 						<label>[B]$VAR[FloorLabelVar][/B]</label>
 						<textoffsety>-2</textoffsety>
 						<textoffsetx>0</textoffsetx>
+						<visible>IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
+				</control>
+				<control type="image">
+					<posx>300</posx>
+					<posy>980</posy>
+					<width>1320</width>
+					<height>120</height>
+					<aspectratio aligny="top">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 				</control>
 				<control type="group">
 					<posx>300</posx>
@@ -106,14 +115,7 @@
 						<textcolor>white</textcolor>
 						<label>$VAR[FloorSubLabelVar]</label>
 						<textoffsetx>30</textoffsetx>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>45</posy>
-						<width>1320</width>
-						<height>30</height>
-						<aspectratio aligny="top">keep</aspectratio>
-						<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
+						<visible>IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
 				</control>
 
@@ -795,6 +797,7 @@
 						<label>[B]$VAR[FloorLabelVar][/B]</label>
 						<textoffsety>-2</textoffsety>
 						<textoffsetx>0</textoffsetx>
+						<visible>IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -810,14 +813,15 @@
 						<textcolor>white</textcolor>
 						<label>$VAR[FloorSubLabelVar]</label>
 						<textoffsetx>30</textoffsetx>
+						<visible>IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
 					<control type="image">
 						<posx>0</posx>
-						<posy>45</posy>
+						<posy>-30</posy>
 						<width>1320</width>
-						<height>30</height>
+						<height>120</height>
 						<aspectratio aligny="top">keep</aspectratio>
-						<texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
+						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 					</control>
 				</control>
 				<control type="group">
