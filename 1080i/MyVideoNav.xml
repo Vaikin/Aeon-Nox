@@ -699,6 +699,32 @@
 							<textcolor>grey</textcolor>
 						</control>
 					</control>
+					<!-- Total Number of Unwatched Episodes -->
+					<control type="group">
+						<posx>450</posx>
+						<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
+						<control type="label">
+							<posx>0</posx>
+							<posy>-3</posy>
+							<width>150</width>
+							<height>60</height>
+							<align>center</align>
+							<label>[B]$INFO[ListItem.Property(UnWatchedEpisodes)][/B]</label>
+							<font>font16</font>
+							<wrapmultiline>true</wrapmultiline>
+							<textcolor>grey</textcolor>
+						</control>
+						<control type="label">
+							<posy>47</posy>
+							<posx>0</posx>
+							<width>150</width>
+							<height>30</height>
+							<align>center</align>
+							<label>[LOWERCASE]Unwatched[/LOWERCASE]</label>
+							<font>font13</font>
+							<textcolor>grey</textcolor>
+						</control>
+					</control>
 					<!-- TVDB Series Status -->
 					<control type="group">
 						<posx>1430</posx>

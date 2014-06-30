@@ -119,7 +119,7 @@
 					<visible>![Container.OnNext | Container.OnPrevious] + !IsEmpty(Listitem.Art(clearlogo))</visible>
 				</control>
 				<control type="label">
-					<left>650</left>
+					<left>730</left>
 					<top>810</top>
 					<width>635</width>
 					<height>245</height>
@@ -127,8 +127,8 @@
 					<textcolor>white</textcolor>
 					<label>$VAR[FloorLabelVar]</label>
 					<animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
-					<animation effect="fade" delay="160" end="100" time="240" condition="!IsEmpty(Listitem.Art(clearlogo))">Conditional</animation>
-					<visible>![Container.OnNext | Container.OnPrevious] + IsEmpty(Listitem.Art(clearlogo))</visible>
+					<animation effect="fade" delay="160" end="100" time="240" condition="true">Conditional</animation>
+					<visible>![Container.OnNext | Container.OnPrevious] + IsEmpty(Listitem.Art(clearlogo)) + [[Container.Content(movies) + Skin.HasSetting(toggleonelogomovies)] | [Container.Content(tvshows) + Skin.HasSetting(toggleonelogotv)]]</visible>
 				</control>
 			</control>
 		</control>

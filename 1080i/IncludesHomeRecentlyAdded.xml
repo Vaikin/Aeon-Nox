@@ -195,7 +195,7 @@
 						<label>$INFO[Container(8000).ListItem.Plot]$INFO[Container(8000).ListItem.Property(Album_Description)]</label>
 						<textcolor>white2</textcolor>
 						<shadowcolor>black</shadowcolor>
-						<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+						<autoscroll time="1500" delay="2000" repeat="2000">true</autoscroll>
 					</control>
 				</control>
 				<control type="grouplist">
