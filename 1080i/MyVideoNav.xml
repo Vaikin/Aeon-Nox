@@ -621,35 +621,16 @@
 					</control>
 				</control>
 				
-				<!-- Showcase TV-->
+				<!-- Logo TV-->
 				<control type="group">
 					<posx>20</posx>
 					<posy>1010</posy>
 					<width>1920</width>
 					<align>center</align>
 					<visible>Container.Content(tvshows)</visible>	
-					<!-- Studios: WB, Universal, etc -->
-					<control type="group">
-						<control type="image" id="857650">
-							<colordiffuse>white</colordiffuse>
-							<include>MediaFlagVars</include>
-							<bordersize>2</bordersize>
-							<texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
-						</control>
-						<control type="label">
-							<width>155</width>
-							<height>90</height>
-							<align>center</align>
-							<label>$INFO[ListItem.Studio]</label>
-							<font>font30</font>
-							<textcolor>white</textcolor>
-							<wrapmultiline>true</wrapmultiline>
-							<visible>IsEmpty(Control.GetLabel(857650))</visible>
-						</control>
-					</control>
 					<!-- Total Number of Seasons -->
 					<control type="group">
-						<posx>150</posx>
+						<posx>0</posx>
 						<visible>!IsEmpty(ListItem.Property(TotalSeasons))</visible>
 						<control type="label">
 							<posx>0</posx>
@@ -675,7 +656,7 @@
 					</control>
 					<!-- Total Number of Episodes -->
 					<control type="group">
-						<posx>300</posx>
+						<posx>150</posx>
 						<visible>!IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 						<control type="label">
 							<posx>0</posx>
@@ -701,7 +682,7 @@
 					</control>
 					<!-- Total Number of Unwatched Episodes -->
 					<control type="group">
-						<posx>450</posx>
+						<posx>300</posx>
 						<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
 						<control type="label">
 							<posx>0</posx>
@@ -733,6 +714,7 @@
 							<include>MediaFlagVars</include>
 							<bordersize>2</bordersize>
 							<texture>tvguide/$INFO[Window(Home).Property(NextAired.StatusID)].png</texture>
+							<posy>-10</posy>
 						</control>
 						<control type="label">
 							<posx>-80</posx>
@@ -744,11 +726,32 @@
 							<font>font13</font>
 							<wrapmultiline>true</wrapmultiline>
 							<textcolor>grey</textcolor>
+							<visible>False</visible>
+						</control>
+					</control>
+					<!-- Studios: WB, Universal, etc -->
+					<control type="group">
+						<posx>1620</posx>
+						<control type="image" id="857650">
+							<colordiffuse>white</colordiffuse>
+							<include>MediaFlagVars</include>
+							<bordersize>2</bordersize>
+							<texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+						</control>
+						<control type="label">
+							<width>155</width>
+							<height>90</height>
+							<align>center</align>
+							<label>$INFO[ListItem.Studio]</label>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<wrapmultiline>true</wrapmultiline>
+							<visible>IsEmpty(Control.GetLabel(857650))</visible>
 						</control>
 					</control>
 					<!-- Mpaa Rating: PG13, R, etc -->
 					<control type="group">
-						<posx>1730</posx>
+						<posx>1780</posx>
 						<control type="image" id="857655">
 							<colordiffuse>white</colordiffuse>
 							<include>MediaFlagVars</include>
