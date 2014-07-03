@@ -165,11 +165,11 @@
 						</animation>
 					</control>
 				</focusedlayout>
-				<itemlayout height="360" width="420" condition="![Container.Content(addons) | Container.Content(genres) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)]">
+				<itemlayout height="360" width="416" condition="![Container.Content(addons) | Container.Content(genres) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)]">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>420</width>
+						<width>416</width>
 						<height>360</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true">$VAR[PosterThumb]</texture>
@@ -179,8 +179,8 @@
 						<colordiffuse>BAffffff</colordiffuse>
 					</control>
 					<control type="image">
-						<posx>320</posx>
-						<posy>0</posy>
+						<posx>315</posx>
+						<posy>1</posy>
 						<width>100</width>
 						<height>100</height>
 						<texture>$VAR[OverlayVar]</texture>
@@ -206,7 +206,7 @@
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="360" width="420" condition="![Container.Content(addons) | Container.Content(genres) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)]">
+				<focusedlayout height="360" width="416" condition="![Container.Content(addons) | Container.Content(genres) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)]">
 					<control type="group">
 						<animation type="Focus">
 							<effect type="zoom" start="95" end="100" time="200" tween="sine" easing="inout" center="auto" />
@@ -215,7 +215,7 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>420</width>
+							<width>416</width>
 							<height>360</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$VAR[PosterThumb]</texture>
@@ -224,9 +224,9 @@
 							<bordersize>8</bordersize>
 						</control>
 						<control type="image">
-							<posx>320</posx>
-							<posy>0</posy>
-							<width>100</width>
+							<posx>319</posx>
+							<posy>-8</posy>
+							<width>110</width>
 							<height>100</height>
 							<texture>$VAR[OverlayVar]</texture>
 							<aspectratio align="center" aligny="top">keep</aspectratio>
@@ -235,7 +235,7 @@
 						<control type="image">
 							<posx>6</posx>
 							<posy>310</posy>
-							<width>408</width>
+							<width>405</width>
 							<height>44</height>
 							<texture>black.png</texture>
 							<bordersize>2</bordersize>
