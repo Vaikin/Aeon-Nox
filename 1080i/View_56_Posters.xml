@@ -7,7 +7,7 @@
 
 			<control type="group">
 				<posx>8</posx>
-				<posy>112</posy>
+				<posy>85</posy>
 				<control type="group" id="5801">
 					<visible>Container(56).OnPrevious</visible>
 					<animation effect="slide" end="0,0" time="200" reversible="false">Hidden</animation>
